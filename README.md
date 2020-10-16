@@ -10,7 +10,7 @@ The plugin depends on the AWS SDK for NodeJS. It uses `AWSCredentialsProvider` t
 You can provide the Region in the constructor programmatically, via the `AWS_REGION` environment variable.
 
 The full documentation for the plugin is available at
-https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.credentials.html#programmatic.credentials.SigV4_KEYSPACES.
+[Amazon Keyspaces AWS Docs](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.credentials.html#programmatic.credentials.SigV4_KEYSPACES).
 
 
 # Using the Plugin
@@ -71,9 +71,9 @@ The following code example demonstrates the previous steps.
 ``` js
 const cassandra = require('cassandra-driver');
 const fs = require('fs');
-const sigV4 = require('aws-sigv4-auth-cassandra-nodejs-driver-plugin');
+const sigV4 = require('aws-sigv4-auth-cassandra-plugin');
 
-const auth = new SigV4AuthProvider({
+const auth = new sigV4.SigV4AuthProvider({
     region: 'us-west-2', 
     accessKeyId:'AKIAIOSFODNN7EXAMPLE',
     secretAccessKey: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'});
@@ -98,6 +98,6 @@ const client = new cassandra.Client({
 const query = 'SELECT * FROM system_schema.keyspaces';
 
 client.execute(query).then(
-    result => console.log('Row from Keyspaces %s', result.rows[0])
+    result => console.log('Row from Keyspaces %s', result.rows[0]))
     .catch( e=> console.log(`${e}`));
 ```
