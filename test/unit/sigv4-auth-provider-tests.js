@@ -106,12 +106,13 @@ describe('SigV4Authenticator', () => {
       region: 'us-west-2',
       accessKeyId: 'UserID-1',
       secretAccessKey: 'UserSecretKey-1',
+      sessionToken: 'SessiosnToken-1',
       date: new Date(1591742511000)
     });
 
     it('should call callback with Signed Request', () => {
       let nonceBuffer = Buffer.from("nonce=91703fdc2ef562e19fbdab0f58e42fe5");
-      let expected = "signature=7f3691c18a81b8ce7457699effbfae5b09b4e0714ab38c1292dbdf082c9ddd87,access_key=UserID-1,amzdate=2020-06-09T22:41:51.000Z";
+      let expected = "signature=7f3691c18a81b8ce7457699effbfae5b09b4e0714ab38c1292dbdf082c9ddd87,access_key=UserID-1,amzdate=2020-06-09T22:41:51.000Z,session_token=SessiosnToken-1";
 
       let calledCallback = false;
       target.evaluateChallenge(nonceBuffer, (err, buff) => {
