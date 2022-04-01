@@ -1,6 +1,6 @@
 # IMPORTANT: Latest Version
 
-The current version is 1.0.2. Please see the [changelog](./CHANGELOG.md) for details on version history.
+The current version is 1.0.3. Please see the [changelog](./CHANGELOG.md) for details on version history.
 
 # What
 
