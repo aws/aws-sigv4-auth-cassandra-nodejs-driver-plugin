@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.692.0",
-    "cassandra-driver": "^4.5.2",
+    "cassandra-driver": "^4.6.3",
     "crypto-js": "^4.0.0",
     "jsdoc": "^3.6.4"
   }
