@@ -35,12 +35,12 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "jsdoc": "^3.6.4",
     "mocha": "^7.2.0"
   },
   "dependencies": {
     "aws-sdk": "^2.692.0",
     "cassandra-driver": "^4.6.3",
-    "crypto-js": "^4.0.0",
-    "jsdoc": "^3.6.4"
+    "crypto-js": "^4.0.0"
   }
 }
